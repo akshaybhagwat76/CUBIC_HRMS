@@ -1,0 +1,280 @@
+﻿
+/* Align button to middle of textbox */
+.align-search-button {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+
+/* Card Customize */
+.card-header-cubic {
+    padding: 5px;
+    font-size: 12px;
+    height: 30px;
+}
+
+.card-body-cubic {
+    padding: 5px;
+    font-size: 12px;
+    height: 45px;
+}
+
+.card-text-cubic {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    height: 45px;
+}
+
+/* Check Box */
+.checkbox-container-cubic {
+    margin-bottom: 2px;
+}
+
+.checkbox-spacing-cubic {
+    margin-right: 15px; /* Adjust the margin as desired */
+}
+
+
+.status-container-cubic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Customize for input form */
+
+
+.input-label-cubic-10 {
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+
+.input-label-cubic-12 {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.input-label-cubic-14 {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.input-label-cubic-16 {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color:black;
+}
+
+.input-text-cubic-10 {
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 140px;
+    color: black;
+}
+
+.input-text-cubic-12 {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 140px;
+    color: black;
+}
+
+.input-text-cubic-14 {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 140px;
+    color: black;
+}
+
+.input-text-cubic-16 {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 140px;
+    color: black;
+}
+
+/* DropDown List*/
+.drop-down-cubic-12 {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 140px;
+    /*    border-color: lightgrey;
+    border: 1px solid;*/
+}
+
+.drop-down-cubic-14 {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 140px;
+/*    border-color: lightgrey;
+    border: 1px solid;*/
+}
+
+
+/*Radio Button*/
+.input-radio-cubic-20 {
+    display: flex;
+    align-items: center;
+}
+
+
+.statusPadding-cubic-5 {
+    padding: 0.25rem 0rem 0.25rem 0rem !important;
+}
+
+.input-radio-cubic-20 input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    margin-right: 1px;
+    vertical-align: middle;
+}
+
+.input-radio-cubic-20 label {
+    margin-left: 10px;
+    line-height: 20px; /* Adjust this if needed */
+}
+
+.input-radio-cubic-20 td {
+    padding-right: 15px; /* adjust this value as per your needs */
+}
+
+/* TABLE Control */
+/* Add a Add Button into Table */
+.add-button-table {
+    background-color: #00A8B0; /* change to your preferred color */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+    .add-button-table:hover {
+        background-color: #45a049; /* change to your preferred color on hover */
+        color: white;
+    }
+
+    .row-margin-btm-cubic{
+        margin-bottom:0.5rem;
+    }
+
+/* Circle Button */
+.status-circle-cubic-16 {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.status-circle-cubic-24 {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.status-circle-cubic-32 {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-clearance-cubic-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.img-clearance-cubic-36 {
+    width: 36px;
+    height: 36px;
+}
+
+/*Save Button*/
+
+/*Next Button*/
+.btn-next-cubic {
+    background-color: #FAAB1A;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-size: small;
+    border-color: #FAAB1A;
+    border-style: Solid;
+}
+
+/*Clear Button*/
+
+.btn-clear-cubic {
+    background-color: #FFFFFF;
+    color: #FAAB1A;
+    border-radius: 8px;
+    font-size: small;
+    border-color: #FAAB1A;
+    border-style: Solid;
+}
+
+
+/*UPLOAD Button*/
+
+/*This part is wording behind*/
+.custom-file-input {
+    background-color: #00A8B0;
+    color: white;
+    border-color: grey;
+}
+
+    .custom-file-input:hover {
+        background-color: #ffd800;
+        color: black;
+        border-color: red;
+    }
+
+    .custom-file-input:active {
+        background-color: #148cf5;
+        color: black;
+        border-color: yellow;
+    }
+
+/*This part is the button*/
+    .custom-file-input::-webkit-file-upload-button {
+        background-color: #00A8B0;
+        color: white;
+    }
+
+    .custom-file-input::-webkit-file-upload-button:hover {
+        background-color: #ffd800;
+        color: black;
+    }
+
+    .custom-file-input::-webkit-file-upload-button:active {
+        background-color: yellow;
+        color: black;
+    }

@@ -1,0 +1,514 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CUBIC_HRMS.SiteMaster" %>
+
+<%--//// css vs min.css 
+after done css, can use cssminifier.com to do the convertion   
+Where bootstrap.css is the development version and bootstrap.min.css is production.
+The main purpose of using bootstrap.min.css is to reduce the size of the file(style) that boosts the website speed.
+ if the css need run from server, then we need att runat="server, else the css will not able to link"
+all JS and CSS is crazy important
+ --%>
+
+<!DOCTYPE html>
+<style>
+    .aspNetDisabled{
+        padding: .5rem 1rem;
+        margin: 0 .5rem;
+        display: block;
+        color:#3a3b45;
+        text-decoration: none;
+        border-radius: .35rem;
+        white-space: nowrap;
+    }
+        .CompanyLogo {
+        text-align: left;
+        /*width:215px;*/
+        width:240px;
+        height: 32px;
+        float: left;
+        padding: 5px 2px 0px 70px;
+        /*5px 0px 0px 20px;*/
+    }
+  </style>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <%-- Data Table --%>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/sb-admin-2-Pro.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+
+    <title>Master</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body class="nav-fixed">
+
+    <script type="text/javascript">
+      // Disable right-click
+      //document.addEventListener('contextmenu', event => event.preventDefault());
+
+      // Check if DevTools is open
+      var devtoolsIsOpen = false;
+      window.addEventListener('devtoolschange', event => {
+        devtoolsIsOpen = event.detail.open;
+      });
+    </script>
+
+    <%-- Top Nav Bar --%>
+    <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
+        <!-- Sidenav Toggle Button-->
+        <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 me-2 ms-lg-2 me-lg-0" id="sidebarToggle"><i data-feather="menu"></i></button>
+        <!-- Navbar Brand-->
+        <!-- * * Tip * * You can use text or an image for your navbar brand.-->
+        <!-- * * * * * * When using an image, we recommend the SVG format.-->
+        <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
+        <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="#">ERP</a>
+        <!-- Navbar Search Input-->
+        <!-- * * Note: * * Visible only on and above the lg breakpoint-->
+        <form class="form-inline me-auto d-none d-lg-block me-3" hidden>
+            <div class="input-group input-group-joined input-group-solid" hidden>
+                <input class="form-control pe-0" type="search" placeholder="Search" aria-label="Search" />
+                <div class="input-group-text"><i data-feather="search"></i></div>
+            </div>
+        </form>
+
+
+        <!-- Navbar Items-->
+        <ul class="navbar-nav align-items-center ms-auto">
+            <!-- Documentation Dropdown-->
+            <li class="nav-item dropdown no-caret d-none d-md-block me-3">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true" hidden>
+                    <div class="fw-500">Documentation</div>
+                    <i class="fas fa-chevron-right dropdown-arrow"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs" aria-hidden="true" hidden>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="book"></i></div>
+                        <div>
+                            <div class="small text-gray-500">Documentation</div>
+                            Usage instructions and reference
+                        </div>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="code"></i></div>
+                        <div>
+                            <div class="small text-gray-500">Components</div>
+                            Code snippets and reference
+                        </div>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="file-text"></i></div>
+                        <div>
+                            <div class="small text-gray-500">Changelog</div>
+                            Updates and changes
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <!-- Navbar Search Dropdown-->
+            <!-- * * Note: * * Visible only below the lg breakpoint-->
+            <li class="nav-item dropdown no-caret me-3 d-lg-none">
+                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="searchDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="search"></i></a>
+                <!-- Dropdown - Search-->
+                <div class="dropdown-menu dropdown-menu-end p-3 shadow animated--fade-in-up" aria-labelledby="searchDropdown">
+                    <form class="form-inline me-auto w-100">
+                        <div class="input-group input-group-joined input-group-solid">
+                            <input class="form-control pe-0" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+                            <div class="input-group-text"><i data-feather="search"></i></div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- Alerts Dropdown-->
+            <li class="nav-item dropdown no-caret d-none d-sm-block me-3 dropdown-notifications">
+                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true" hidden><i data-feather="bell"></i></a>
+                <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts" aria-hidden="true" hidden>
+                    <h6 class="dropdown-header dropdown-notifications-header">
+                        <i class="me-2" data-feather="bell"></i>
+                        Alerts Center
+                    </h6>
+                    <!-- Example Alert 1-->
+                    <a class="dropdown-item dropdown-notifications-item" href="#!">
+                        <div class="dropdown-notifications-item-icon bg-warning"><i data-feather="activity"></i></div>
+                        <div class="dropdown-notifications-item-content">
+                            <div class="dropdown-notifications-item-content-details">December 29, 2021</div>
+                            <div class="dropdown-notifications-item-content-text">This is an alert message. It's nothing serious, but it requires your attention.</div>
+                        </div>
+                    </a>
+                    <!-- Example Alert 2-->
+                    <a class="dropdown-item dropdown-notifications-item" href="#!">
+                        <div class="dropdown-notifications-item-icon bg-info"><i data-feather="bar-chart"></i></div>
+                        <div class="dropdown-notifications-item-content">
+                            <div class="dropdown-notifications-item-content-details">December 22, 2021</div>
+                            <div class="dropdown-notifications-item-content-text">A new monthly report is ready. Click here to view!</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item dropdown-notifications-footer" href="#!">View All Alerts</a>
+                </div>
+            </li>
+            <!-- Messages Dropdown-->
+            <li class="nav-item dropdown no-caret d-none d-sm-block me-3 dropdown-notifications">
+                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true" hidden><i data-feather="mail"></i></a>
+                <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownMessages" aria-hidden="true" hidden>
+                    <h6 class="dropdown-header dropdown-notifications-header">
+                        <i class="me-2" data-feather="mail"></i>
+                        Message Center
+                    </h6>
+                    <!-- Example Message 1  -->
+                    <a class="dropdown-item dropdown-notifications-item" href="#!">
+                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-2.png" />
+                        <div class="dropdown-notifications-item-content">
+                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="dropdown-notifications-item-content-details">Thomas Wilcox · 58m</div>
+                        </div>
+                    </a>
+                    <!-- Example Message 2-->
+                    <a class="dropdown-item dropdown-notifications-item" href="#!">
+                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-3.png" />
+                        <div class="dropdown-notifications-item-content">
+                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="dropdown-notifications-item-content-details">Emily Fowler · 2d</div>
+                        </div>
+                    </a>
+                    <!-- Example Message 3-->
+                    <a class="dropdown-item dropdown-notifications-item" href="#!">
+                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-4.png" />
+                        <div class="dropdown-notifications-item-content">
+                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="dropdown-notifications-item-content-details">Marshall Rosencrantz · 3d</div>
+                        </div>
+                    </a>
+                    <!-- Example Message 4-->
+                    <a class="dropdown-item dropdown-notifications-item" href="#!">
+                        <img class="dropdown-notifications-item-img" src="assets/img/illustrations/profiles/profile-5.png" />
+                        <div class="dropdown-notifications-item-content">
+                            <div class="dropdown-notifications-item-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="dropdown-notifications-item-content-details">Colby Newton · 3d</div>
+                        </div>
+                    </a>
+                    <!-- Footer Link-->
+                    <a class="dropdown-item dropdown-notifications-footer" href="#!">Read All Messages</a>
+                </div>
+            </li>
+
+
+            <!-- User Dropdown-->
+            <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
+                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></a>
+                <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
+                    <h6 class="dropdown-header d-flex align-items-center">
+                        <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-1.png" />
+                        <div class="dropdown-user-details">
+                            <asp:Label ID="lblLoginNameTopNav" runat="server" Text="" class="inputLabel">AA</asp:Label>
+                            <%--<div class="dropdown-user-details-email">vluna@aol.com</div>--%>
+                        </div>
+                    </h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#!" aria-hidden="true" hidden>
+                        <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
+                        Account
+                    </a>
+                    <a class="dropdown-item my-auto" href="#FrmLogin.aspx" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
+                        Logout
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <%-- End Top Nav Bar --%>
+
+
+    <%-- Start Side Bar --%>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sidenav shadow-right sidenav-light">
+                <%-- Start Side Menu --%>
+                <div class="sidenav-menu">
+                    <%-- Start Side Nav --%>
+                    <div class="nav accordion" id="accordionSidenav">
+                        <!-- Sidenav Menu Heading (Account)-->
+                        <!-- * * Note: * * Visible only on and above the sm breakpoint-->
+                        <div class="sidenav-menu-heading d-sm-none">Account</div>
+                        <!-- Sidenav Link (Alerts)-->
+                        <!-- * * Note: * * Visible only on and above the sm breakpoint-->
+                        <a class="nav-link d-sm-none" href="#!">
+                            <div class="nav-link-icon"><i data-feather="bell"></i></div>
+                            Alerts
+                                <span class="badge bg-warning-soft text-warning ms-auto">4 New!</span>
+                        </a>
+                        <!-- Sidenav Link (Messages)-->
+                        <!-- * * Note: * * Visible only on and above the sm breakpoint-->
+                        <a class="nav-link d-sm-none" href="#!">
+                            <div class="nav-link-icon"><i data-feather="mail"></i></div>
+                            Messages
+                                <span class="badge bg-success-soft text-success ms-auto">2 New!</span>
+                        </a>
+
+                        <%-- Operation --%>
+                        <div class="sidenav-menu-heading">Operation</div>
+
+                        <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseOperation" aria-controls="collapseOperation">
+                                <div class="nav-link-icon"><i data-feather="grid"></i></div>
+                                    Admin Setting
+                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </asp:HyperLink>
+                        <div class="collapse" id="collapseOperation" data-parent="#accordionSidenav">
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavAdmin">
+
+                                  <asp:HyperLink class="nav-link" ID="HLinkAdminMaster" runat="server" Text="1. Access Maintenance" NavigateUrl="AdminMaster.aspx?ID=HLinkAdminMaster"> <%--<div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>--%></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkPositionMaster" runat="server" Text="2. Position Master" NavigateUrl="FrmEmpty.aspx?ID=HLinkPositionMaster"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkLeaveMaster" runat="server" Text="3. Leave Master" NavigateUrl="FrmLeaveSetting.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkDeptMaster" runat="server" Text="4. Department Master" NavigateUrl="FrmMaintDepartment.aspx"></asp:HyperLink>
+                               <asp:HyperLink class="nav-link" ID="HLinkCustMaster" runat="server" Text="5. Customer Master" NavigateUrl="FrmMaintCustomer.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkAllowMaster" runat="server" Text="6. Allowance Master" NavigateUrl="FrmMaintAllowance.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkClaimMaster" runat="server" Text="7. Claim Master" NavigateUrl="FrmMaintClaim.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkLeaveMaintenance" runat="server" Text="8. Leave Day Maint" NavigateUrl="FrmEmpLeaveMaintenance.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkPublicHolidayMain" runat="server" Text="9. Public Holiday Master" NavigateUrl="FrmPubHolidayMaint.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HPMaterialFrom" runat="server" NavigateUrl="FrmEmpty.aspx?ID=HPMaterialFrom"> Component Incoming Maintenance</asp:HyperLink>
+
+              
+                            </nav>
+                        </div>
+
+                        <%-- End Operation --%>
+
+
+
+                        <%-- Employee --%>
+                        <div class="sidenav-menu-heading">HRMS</div>
+
+                        <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseEmployee" aria-controls="collapseEmployee">
+                                <div class="nav-link-icon"><i data-feather="users"></i></div>
+                                    Employee
+                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </asp:HyperLink>
+
+                        <div class="collapse" id="collapseEmployee" data-parent="#accordionSidenav">
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavEmployee">
+                                <asp:HyperLink class="nav-link" ID="HPSub2Dashboard" runat="server" NavigateUrl="FrmSub2Dashboard.aspx" Visible="false">
+                                             Employee DashBoard
+                                </asp:HyperLink>
+
+                                <asp:HyperLink class="nav-link" ID="HLinkEmpMaster" runat="server" Text="Employee Master" NavigateUrl="FrmEmployeeMaster.aspx?ID=HLinkEmpMaster"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkChangePassword" runat="server" Text="Change Password" NavigateUrl="FrmChangePassword.aspx"></asp:HyperLink>
+
+                                <%-- able get all employee summary. can show employee asset as well --%>
+                                <asp:HyperLink class="nav-link" ID="HLinkEmpReport" runat="server" Text="Employee Report" NavigateUrl="RptEmployeeReport.aspx"></asp:HyperLink>
+
+                                <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseLeave" aria-controls="collapseLeave">
+                                           <i class="fas fa-plane-departure"></i>&nbsp;Leave
+                                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </asp:HyperLink>
+
+                                <div class="collapse" id="collapseLeave" data-parent="#accordionSidenav_Employee">
+                                    <nav class="sidenav-menu-nested nav">
+
+                                        <asp:HyperLink class="nav-link" ID="HLinkLeaveRequest" runat="server" Text="Leave Request" NavigateUrl="FrmLeaveRequest.aspx?ID=HLinkLeaveRequest"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLinkPenLeaveReq" runat="server" Text="Pending Leave Request" NavigateUrl="FrmManagemPdgLeave.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLinkLeaveCalendar" runat="server" Text="Leave Calendar View" NavigateUrl="FrmLeaveCalendar.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLinkHRLeaveReq" runat="server" Text="HR Management Leave Request" NavigateUrl="FrmHRViewAllLeaveReq.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLLeaveSumReport" runat="server" Text="Leave Summary Report" NavigateUrl="FrmLeaveSumReport.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLLeaveDetailsReport" runat="server" Text="Leave Details Report" NavigateUrl="FrmLeaveDetReport.aspx"></asp:HyperLink>
+
+                                        <%--<asp:HyperLink class="nav-link" ID="HPSub2WS1Dashboard" runat="server" NavigateUrl="FrmSub2WS1Dashboard.aspx?ID=HPSub2WS1Dashboard&SubProcess=2&Workstation=1">Dashboard</asp:HyperLink>--%>
+                                    </nav>
+                                </div>
+
+
+                                <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseClaim" aria-controls="collapseClaim">
+                                           <i class="fas fa-money-check-alt"></i>&nbsp;Claim
+                                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </asp:HyperLink>
+
+                                <div class="collapse" id="collapseClaim" data-parent="#accordionSidenav_Employee">
+                                    <nav class="sidenav-menu-nested nav">
+                                        <asp:HyperLink class="nav-link" ID="HLinkClaimReq" runat="server" Text="Claim Request" NavigateUrl="FrmEmpClaim.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLinkPenClaimReq" runat="server" Text="Pending Claim Request" NavigateUrl="FrmManagemPdgClaim.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLinkHRClaimReq" runat="server" Text="HR Management Claim Request" NavigateUrl="FrmHRViewAllClaim.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLClaimSumReport" runat="server" Text="Claim Summary Report" NavigateUrl="FrmReportClaimSummary.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLClaimDetReport" runat="server" Text="Claim Details Report" NavigateUrl="FrmReportClaimDetails.aspx"></asp:HyperLink>
+                                    </nav>
+                                </div>
+
+
+                                 <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseAccount" aria-controls="collapseAccount">
+                                           <i class="fas fa-comment-dollar"></i>&nbsp;Account
+                                    <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </asp:HyperLink>
+
+                                <div class="collapse" id="collapseAccount" data-parent="#accordionSidenav_Employee">
+                                    <nav class="sidenav-menu-nested nav">
+                                        <asp:HyperLink class="nav-link" ID="HLinkEmpPayroll" runat="server" Text="Employee Payroll" NavigateUrl="FrmPayrollMonth.aspx"></asp:HyperLink>
+                                        <asp:HyperLink class="nav-link" ID="HLinkPayrollSumReport" runat="server" Text="Payroll Summary Report" NavigateUrl="FrmReportPayrollSummary.aspx"></asp:HyperLink>
+                                    </nav>
+                                </div>
+
+                            </nav>
+                        </div>
+                        <%-- End Employee --%>
+
+
+                        <div class="sidenav-menu-heading">PMS</div>
+
+                        <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseProject" aria-controls="collapseProject">
+                            <div class="nav-link-icon"><i  class="fas fa-money-check-alt"></i></div>
+                            Project Management
+                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
+
+                        </asp:HyperLink>
+
+                        <div class="collapse" id="collapseProject" data-parent="#accordionSidenav_Project">
+                            <nav class="sidenav-menu-nested nav">
+                                <asp:HyperLink class="nav-link" ID="HLinkProjManagement" runat="server" Text="Project Management" NavigateUrl="FrmProjectManagement.aspx"></asp:HyperLink>
+
+                            </nav>
+                        </div>
+
+                    </div>
+                    <%-- End  <div class="nav accordion" id="accordionSidenav"> --%>
+                </div>
+                <%-- End  Side Menu --%>
+
+                <!-- Sidenav Footer-->
+                <div class="sidenav-footer">
+                    <div class="sidenav-footer-content">
+                        <div class="sidenav-footer-subtitle">Logged in as:</div>
+                         <asp:Label ID="lblLoginNameSideNav" runat="server" Text="" class="sidenav-footer-title"></asp:Label>
+                    </div>
+                </div>
+                <!-- End Sidenav Footer-->
+
+            </nav>
+        </div>
+
+                    <%-- Main Content --%>
+        <div id="layoutSidenav_content">
+            <main>
+                <form id="form1" runat="server" defaultbutton="btnDisableEnter">
+                    <div>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                    <div class="clear">
+                        <asp:TextBox ID="txtModuleCode" runat="server" Visible="False"></asp:TextBox>
+                        <asp:TextBox ID="txtModuleEditable" runat="server" Visible="False"></asp:TextBox>
+                        <asp:Button ID="btnDisableEnter" runat="server" Text="" Style="display: none;" />
+                    </div>
+                </form>
+                <%-- End Content --%>
+            </main>
+
+            <footer class="footer-admin mt-auto footer-light">
+                <div class="container-xl px-4">
+                    <div class="row">
+                        <div class="col-md-6 small">Copyright © CubicSoftware Solution Sdn Bhd. All Right Reserved. 2019 - <%: DateTime.Now.Year %> . v2.0.2</div>
+                        <div class="col-md-6 text-md-end small">
+                            <a href="#!">Privacy Policy</a>
+                            &middot;
+                                <a href="#!">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <%-- End Main Content --%>
+    </div>
+    <%-- End Side Bar --%>
+
+
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true" hidden>
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">If you are ready to end your current session, please select 'Logout' below.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    <asp:HyperLink class="btn btn-primary" ID="HLinkLogOut" runat="server" Text="Sign Out" NavigateUrl="FrmLogin.aspx">Sign Out</asp:HyperLink>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Message Modal-->
+        <div class="modal fade" id="MessageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="MessageModalTitle"></h5>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true" hidden>
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="MessageModalContent"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    <asp:HyperLink class="btn btn-primary" ID="HLinkMsgModal" runat="server" Text="Sign Out" NavigateUrl="#">-</asp:HyperLink>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery and Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <%-- BootStrap --%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/sb-admin-2-pro.js"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+
+
+    <!-- Simple Datatables JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css" />
+
+    <!-- DataTables JavaScript -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css" />
+
+    <!-- DataTables Buttons JavaScript -->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+
+    <!-- Supporting libraries for DataTables Buttons -->
+    <%--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>--%>
+    <%--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>--%>
+    <%--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/vfs_fonts.js"></script>--%>
+
+
+</body>
+</html>
