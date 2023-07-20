@@ -6,29 +6,30 @@ Where bootstrap.css is the development version and bootstrap.min.css is producti
 The main purpose of using bootstrap.min.css is to reduce the size of the file(style) that boosts the website speed.
  if the css need run from server, then we need att runat="server, else the css will not able to link"
 all JS and CSS is crazy important
- --%>
+--%>
 
 <!DOCTYPE html>
 <style>
-    .aspNetDisabled{
+    .aspNetDisabled {
         padding: .5rem 1rem;
         margin: 0 .5rem;
         display: block;
-        color:#3a3b45;
+        color: #3a3b45;
         text-decoration: none;
         border-radius: .35rem;
         white-space: nowrap;
     }
-        .CompanyLogo {
+
+    .CompanyLogo {
         text-align: left;
         /*width:215px;*/
-        width:240px;
+        width: 240px;
         height: 32px;
         float: left;
         padding: 5px 2px 0px 70px;
         /*5px 0px 0px 20px;*/
     }
-  </style>
+</style>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -57,14 +58,14 @@ all JS and CSS is crazy important
 <body class="nav-fixed">
 
     <script type="text/javascript">
-      // Disable right-click
-      //document.addEventListener('contextmenu', event => event.preventDefault());
+        // Disable right-click
+        //document.addEventListener('contextmenu', event => event.preventDefault());
 
-      // Check if DevTools is open
-      var devtoolsIsOpen = false;
-      window.addEventListener('devtoolschange', event => {
-        devtoolsIsOpen = event.detail.open;
-      });
+        // Check if DevTools is open
+        var devtoolsIsOpen = false;
+        window.addEventListener('devtoolschange', event => {
+            devtoolsIsOpen = event.detail.open;
+        });
     </script>
 
     <%-- Top Nav Bar --%>
@@ -272,18 +273,18 @@ all JS and CSS is crazy important
                         <div class="collapse" id="collapseOperation" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavAdmin">
 
-                                  <asp:HyperLink class="nav-link" ID="HLinkAdminMaster" runat="server" Text="1. Access Maintenance" NavigateUrl="AdminMaster.aspx?ID=HLinkAdminMaster"> <%--<div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>--%></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkAdminMaster" runat="server" Text="1. Access Maintenance" NavigateUrl="AdminMaster.aspx?ID=HLinkAdminMaster"> <%--<div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>--%></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkPositionMaster" runat="server" Text="2. Position Master" NavigateUrl="FrmEmpty.aspx?ID=HLinkPositionMaster"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkLeaveMaster" runat="server" Text="3. Leave Master" NavigateUrl="FrmLeaveSetting.aspx"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkDeptMaster" runat="server" Text="4. Department Master" NavigateUrl="FrmMaintDepartment.aspx"></asp:HyperLink>
-                               <asp:HyperLink class="nav-link" ID="HLinkCustMaster" runat="server" Text="5. Customer Master" NavigateUrl="FrmMaintCustomer.aspx"></asp:HyperLink>
+                                <asp:HyperLink class="nav-link" ID="HLinkCustMaster" runat="server" Text="5. Customer Master" NavigateUrl="FrmMaintCustomer.aspx"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkAllowMaster" runat="server" Text="6. Allowance Master" NavigateUrl="FrmMaintAllowance.aspx"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkClaimMaster" runat="server" Text="7. Claim Master" NavigateUrl="FrmMaintClaim.aspx"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkLeaveMaintenance" runat="server" Text="8. Leave Day Maint" NavigateUrl="FrmEmpLeaveMaintenance.aspx"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HLinkPublicHolidayMain" runat="server" Text="9. Public Holiday Master" NavigateUrl="FrmPubHolidayMaint.aspx"></asp:HyperLink>
                                 <asp:HyperLink class="nav-link" ID="HPMaterialFrom" runat="server" NavigateUrl="FrmEmpty.aspx?ID=HPMaterialFrom"> Component Incoming Maintenance</asp:HyperLink>
 
-              
+
                             </nav>
                         </div>
 
@@ -348,7 +349,7 @@ all JS and CSS is crazy important
                                 </div>
 
 
-                                 <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseAccount" aria-controls="collapseAccount">
+                                <asp:HyperLink class="nav-link collapsed" href="javascript:void(0);" runat="server" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseAccount" aria-controls="collapseAccount">
                                            <i class="fas fa-comment-dollar"></i>&nbsp;Account
                                     <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </asp:HyperLink>
@@ -391,7 +392,7 @@ all JS and CSS is crazy important
                 <div class="sidenav-footer">
                     <div class="sidenav-footer-content">
                         <div class="sidenav-footer-subtitle">Logged in as:</div>
-                         <asp:Label ID="lblLoginNameSideNav" runat="server" Text="" class="sidenav-footer-title"></asp:Label>
+                        <asp:Label ID="lblLoginNameSideNav" runat="server" Text="" class="sidenav-footer-title"></asp:Label>
                     </div>
                 </div>
                 <!-- End Sidenav Footer-->
@@ -399,7 +400,7 @@ all JS and CSS is crazy important
             </nav>
         </div>
 
-                    <%-- Main Content --%>
+        <%-- Main Content --%>
         <div id="layoutSidenav_content">
             <main>
                 <form id="form1" runat="server" defaultbutton="btnDisableEnter">
@@ -455,8 +456,8 @@ all JS and CSS is crazy important
         </div>
     </div>
 
-        <!-- Message Modal-->
-        <div class="modal fade" id="MessageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Message Modal-->
+    <div class="modal fade" id="MessageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -478,7 +479,10 @@ all JS and CSS is crazy important
 
 
     <!-- jQuery and Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <%-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>--%>
+    <script src="assets/fullcalendar/jquery.min.js"></script>
+
+
 
     <%-- BootStrap --%>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -508,6 +512,17 @@ all JS and CSS is crazy important
     <%--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>--%>
     <%--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>--%>
     <%--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/vfs_fonts.js"></script>--%>
+
+
+    <%--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>--%>
+    <script src="js/dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="assets/demo/datatables-demo.js"></script>
+
+
+    <script src="assets/fullcalendar/moment.min.js"></script>
+    <script src="assets/fullcalendar/fullcalendar.min.js"></script>
+    <script src="assets/fullcalendar/jquery-ui.min.js"></script>
 
 
 </body>

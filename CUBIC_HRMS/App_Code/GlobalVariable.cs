@@ -111,7 +111,8 @@ namespace CUBIC_HRMS
 
 
 
-        public static string ConnectionString = "Data Source=OFFICE-2\\SQLEXPRESS;Initial Catalog=TEMP_CUBIC_HRMS;User ID=sa;Password=sa123;Connection Timeout=30;Max Pool Size=30000";
+        //public static string ConnectionString = "Data Source=LOCALHOST\\SQLEXPRESS;Initial Catalog=TEMP_CUBIC_HRMS;User ID=sa;Password=@@DMS1208@@;Connection Timeout=30;Max Pool Size=30000";
+        public static string ConnectionString = "Data Source=DESKTOP-20GK6OE\\SQLEXP2008;Initial Catalog=TEMP_CUBIC_HRMS;User ID=sa;Password=vips@5619;Connection Timeout=30;Max Pool Size=30000";
 
         // ** Message Box Use
         // ** FrmMessageDisplay
