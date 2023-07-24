@@ -69,7 +69,7 @@
         }
     </script>
 
-     <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
     <div class="container-fluid">
 
@@ -90,7 +90,7 @@
                     <div class="form-group col-md-12" style="border: 0px solid">
 
                         <%-- MultiView --%>
-                        <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
+                        <asp:MultiView ID="MultiView1" ActiveViewIndex="3" runat="server">
                             <asp:View ID="View1" runat="server">
                                 <%-- Start DIV --%>
                                 <div class="container form-group">
@@ -402,644 +402,446 @@
                                 </div>
                             </asp:View>
 
-<%-- ************************************ VIEW 2 --%>
+                            <%-- ************************************ VIEW 2 --%>
                             <asp:View ID="View2" runat="server">
-                                <br />
 
 
-                                <table class="w3-table-all">
+                                <div class="container form-group">
 
-                                    <tr>
-                                        <th class="auto-style24">
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
                                             <h3 style="margin-top: 21px; margin-bottom: 21px; font-family: Arial, Helvetica, sans-serif">Address Information</h3>
-                                        </th>
-                                        <th style="width: 30%;"></th>
-                                        <th style="width: 0%;"></th>
-                                        <th style="width: 25%;">&nbsp;</th>
-                                        <th style="width: 10%;"></th>
-                                        <th style="width: 10%;"></th>
-                                    </tr>
 
-                                    <tr>
-                                        <th class="auto-style24">
-                                            <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px">Required</h5>
-                                        </th>
-                                        <th></th>
-                                        <th></th>
-                                        <th>&nbsp;</th>
-                                        <th>&nbsp;</th>
-                                        <th></th>
-                                    </tr>
+                                        </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblAddress1" runat="server" Text="Address 1 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAddress1" runat="server" class="w3-input w3-border" placeholder="Enter Address 1"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddress1" runat="server" ControlToValidate="txtAddress1"  ErrorMessage="Please enter a Address 1"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td>&nbsp;</td>
-                                        <td></td>
-                                    </tr>
+                                    </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblAddress2" runat="server" Text="Address 2 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAddress2" runat="server" class="w3-input w3-border" placeholder="Enter Address 2"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddress2" runat="server" ControlToValidate="txtAddress2"  ErrorMessage="Please enter a Address 2"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td>&nbsp;</td>
-                                        <td></td>
-                                    </tr>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label3" runat="server" Text="Required" class="input-label-cubic-14"></asp:Label>
+                                        </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblAddress3" runat="server" Text="Address 3 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAddress3" runat="server" class="w3-input w3-border" placeholder="Enter Address 3"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddress3" runat="server" ControlToValidate="txtAddress3"  ErrorMessage="Please enter a Address 3"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblAddress4" runat="server" Text="Address 4 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAddress4" runat="server" class="w3-input w3-border" placeholder="Enter Address 4"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddress4" runat="server" ControlToValidate="txtAddress4"  ErrorMessage="Please enter a Address 4"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label1" runat="server" Text="Address 1" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAddress1" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 1"></asp:TextBox>
+                                        </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblPostCode" runat="server" Text="Post Code "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtPostCode" runat="server" class="w3-input w3-border" placeholder=" Enter Post Code"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vPostCode" runat="server" ControlToValidate="txtPostCode"  ErrorMessage="Please enter a Post Code"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblCity" runat="server" Text="City "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtCity" runat="server" class="w3-input w3-border" placeholder=" Enter City"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vCity" runat="server" ControlToValidate="txtCity"  ErrorMessage="Please enter a City"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                    </tr>
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
 
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label2" runat="server" Text="Address 2" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAddress2" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 2"></asp:TextBox>
+                                        </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblState" runat="server" Text="State "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtState" runat="server" class="w3-input w3-border" placeholder=" Enter State"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vState" runat="server" ControlToValidate="txtPostCode"  ErrorMessage="Please enter a State"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblCountry" runat="server" Text="Country "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtCountry" runat="server" class="w3-input w3-border" placeholder=" Enter Country"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vCountry" runat="server" ControlToValidate="txtCity"  ErrorMessage="Please enter a Country"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                    </tr>
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblAddContact1" runat="server" Text="Contact No 1 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAddContactNo1" runat="server" class="w3-input w3-border" placeholder=" Enter Contact  No 1"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddContact1" runat="server" ControlToValidate="txtPostCode"  ErrorMessage="Please enter a Contact No 1"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <%--  <asp:Label ID="lblAddEmailC1" runat="server" Text="Email "  ></asp:Label>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <%--  <asp:TextBox ID="txtAddEmailC1" runat="server" class="w3-input w3-border" placeholder=" Enter Email"></asp:TextBox>--%>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddEmailC1" runat="server" ControlToValidate="txtAddEmailC1"  ErrorMessage="Please enter a Email"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                    </tr>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label4" runat="server" Text="Address 3" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAddress3" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 3"></asp:TextBox>
+                                        </div>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <%--   <asp:Label ID="lblAddContactNo2" runat="server" Text="Contact No 2"  ></asp:Label>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <%--  <asp:TextBox ID="txtAddContactNo2" runat="server" class="w3-input w3-border" placeholder="Enter Contact No 2 "></asp:TextBox>--%>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vAddContactNo2" runat="server" ControlToValidate="txtAddress4"  ErrorMessage="Please enter a Contact No 2"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td class="auto-style24"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label5" runat="server" Text="Address 4" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAddress4" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 4"></asp:TextBox>
+                                        </div>
 
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label6" runat="server" Text="Post Code" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtPostCode" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter Post Code"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label7" runat="server" Text="City" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtCity" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter City"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label8" runat="server" Text="Enter State" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtState" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter State"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label9" runat="server" Text="Country" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtCountry" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter Country"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label10" runat="server" Text="Contact No 1" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAddContactNo1" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter Contact  No 1"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <h3 style="margin-top: 21px; margin-bottom: 21px; font-family: Arial, Helvetica, sans-serif">Mailing Address Information</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-11">
                                             <asp:CheckBox ID="chkSameAsAbove" AutoPostBack="true" runat="server" Text="Address Same as Above" OnCheckedChanged="chkSameAsAbove_CheckedChanged" />
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        </div>
+                                    </div>
+                                    <div class="row row-margin-btm-cubic">
+                                    </div>
+
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label12" runat="server" Text="Address 1" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMAddress1" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 1"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label13" runat="server" Text="Address 2" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMAddress2" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 2"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label14" runat="server" Text="Address 3" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMAddress3" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 3"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label15" runat="server" Text="Address 4" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMAddress4" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Address 4"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label16" runat="server" Text="Post Code" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMPostCode" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter Post Code"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label17" runat="server" Text="City" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMCity" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter City"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label18" runat="server" Text="Enter State" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMState" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter State"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label19" runat="server" Text="Country" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMCountry" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter Country"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label20" runat="server" Text="Contact No 1" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtMContactNo1" runat="server" class="form-control input-text-cubic-12" placeholder=" Enter Contact  No 1"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row row-margin-btm-cubic">
+
+
+                                        <div class="form-group col-md-5 d-flex justify-content-end">
+                                            <asp:Button ID="btnBackPage1" runat="server" class="btn-next-cubic" BorderStyle="Solid" Height="35" OnClick="btnBackPage1_Click" Style="float: left; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="&lt;&lt; Back Page" Width="200" />
+                                            <asp:Button ID="btnClearAll2" runat="server" class="btn-clear-cubic" Style="float: right; background-color: #FFFFFF; color: #FAAB1A; border-radius: 8px; font-size: small" Text="Clear All" BorderStyle="Solid" Width="180" Height="35" CssClass="auto-style1" BorderColor="#FAAB1A" OnClick="btnClearAll2_Click" />
+                                            <asp:Button ID="btnNextPage2" runat="server" class="btn-next-cubic" BorderStyle="Solid" OnClick="btnNextPage2_Click" Height="35" Style="float: left; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="Next Page &gt;&gt;" Width="200" />
+
+                                            <%--<asp:Button ID="Button1" runat="server" class="btn-clear-cubic" Style="margin-right: 10px;" Text="Clear All" Width="180" Height="35" OnClick="btnClearAll1_Click" />
+                                            <asp:Button ID="Button2" runat="server" class="btn-next-cubic" Text="Next Page &gt;&gt;" Width="200" Height="35" OnClick="btnNextPage1_Click" />--%>
+                                        </div>
+                                    </div>
+
+                                </div>
 
 
 
-                                    <tr>
-                                        <th class="cssTableFieldInput">
-                                            <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; font-weight: 700">Mailing Address Information</h5>
-                                        </th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblMAddress1" runat="server" Text="Address 1 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMAddress1" runat="server" class="w3-input w3-border" placeholder="Enter Address 1"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMAddress1" runat="server" ControlToValidate="txtMAddress1"  ErrorMessage="Please enter a Address 1"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblMAddress2" runat="server" Text="Address 2 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMAddress2" runat="server" class="w3-input w3-border" placeholder="Enter Address 2"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMAddress2" runat="server" ControlToValidate="txtMAddress2"  ErrorMessage="Please enter a Address 2"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
 
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblMAddress3" runat="server" Text="Address 3 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMAddress3" runat="server" class="w3-input w3-border" placeholder="Enter Address 3"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMAddress3" runat="server" ControlToValidate="txtMAddress3"  ErrorMessage="Please enter a Address 3"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblMAddress4" runat="server" Text="Address 4 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMAddress4" runat="server" class="w3-input w3-border" placeholder="Enter Address 4"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMAddress4" runat="server" ControlToValidate="txtMAddress4"  ErrorMessage="Please enter a Address 4"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td>&nbsp;</td>
-                                        <td></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblMPostCode" runat="server" Text="Post Code "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMPostCode" runat="server" class="w3-input w3-border" placeholder=" Enter Post Code"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMPostCode" runat="server" ControlToValidate="txtMPostCode"  ErrorMessage="Please enter a Post Code"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblMCity" runat="server" Text="City "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMCity" runat="server" class="w3-input w3-border" placeholder=" Enter City"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMCity" runat="server" ControlToValidate="txtCity"  ErrorMessage="Please enter a City"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblMState" runat="server" Text="State "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMState" runat="server" class="w3-input w3-border" placeholder="Enter State"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMState" runat="server" ControlToValidate="txtPostCode"  ErrorMessage="Please enter a State"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblMCountry" runat="server" Text="Country "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMCountry" runat="server" class="w3-input w3-border" placeholder=" Enter Country"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMCountry" runat="server" ControlToValidate="txtMCountry"  ErrorMessage="Please enter a Country"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="auto-style25" style="padding: 15px">
-                                            <asp:Label ID="lblMContactNo1" runat="server" Text="Contact No 1 "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtMContactNo1" runat="server" class="w3-input w3-border" placeholder=" Enter Contact  No 1"></asp:TextBox>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <%--<asp:RequiredFieldValidator ID="vMContactNo1" runat="server" ControlToValidate="txtPostCode"  ErrorMessage="Please enter a Contact No 1"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <%--<asp:Label ID="lblMEmail" runat="server" Text="Email "  ></asp:Label>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <%-- <asp:TextBox ID="txtMEmail" runat="server" class="w3-input w3-border" placeholder=" Enter Email"></asp:TextBox>--%>
-                                        </td>
-                                        <td>
-                                            <%--<asp:RequiredFieldValidator ID="vMEmail" runat="server" ControlToValidate="txtMEmail"  ErrorMessage="Please enter a Email"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th class="auto-style24">
-                                            <asp:Button ID="btnBackPage1" runat="server" BorderStyle="Solid" Height="35" OnClick="btnBackPage1_Click" Style="float: left; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="&lt;&lt; Back Page" Width="200" />
-                                        </th>
-                                        <th></th>
-                                        <th></th>
-                                        <th>
-                                            <asp:Button ID="btnClearAll2" runat="server" Style="float: right; background-color: #FFFFFF; color: #FAAB1A; border-radius: 8px; font-size: small" Text="Clear All" BorderStyle="Solid" Width="180" Height="35" CssClass="auto-style1" BorderColor="#FAAB1A" OnClick="btnClearAll2_Click" />
-                                        </th>
-                                        <th>
-                                            <asp:Button ID="btnNextPage2" runat="server" BorderStyle="Solid" class="btnNextPage2" OnClick="btnNextPage2_Click" Height="35" Style="float: left; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="Next Page &gt;&gt;" Width="200" />
-                                        </th>
-                                        <th>&nbsp;</th>
-                                    </tr>
-                                </table>
 
                             </asp:View>
 
                             <asp:View ID="View3" runat="server">
+                                <div class="container form-group">
 
-                                <br />
 
-                                <table class="w3-table-all">
-
-                                    <tr>
-                                        <th class="auto-style27">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
                                             <h3 style="margin-top: 21px; margin-bottom: 21px; font-family: Arial, Helvetica, sans-serif">Payroll Information</h3>
-                                        </th>
-                                        <th class="auto-style28"></th>
-                                        <th class="auto-style29"></th>
-                                        <th class="auto-style27"></th>
-                                        <th class="auto-style30"></th>
-                                        <th class="auto-style30"></th>
-                                    </tr>
+                                        </div>
 
-                                    <tr>
-                                        <th>
-                                            <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px">Required</h5>
-                                        </th>
-                                        <th></th>
-                                        <th class="auto-style26"></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblPaymentType" runat="server" Text="Payment Type "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlPaymentType" runat="server" AutoPostBack="false" class="w3-input w3-border" ValidateRequestMode="Enabled">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label11" runat="server" Text="Required" class="input-label-cubic-14"></asp:Label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label21" runat="server" Text="Payment Type" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlPaymentType" runat="server" AutoPostBack="false" class="form-control drop-down-cubic-14" ValidateRequestMode="Enabled">
                                                 <asp:ListItem>Cash</asp:ListItem>
                                                 <asp:ListItem>Bank</asp:ListItem>
                                             </asp:DropDownList>
-                                        </td>
-                                        <td class="auto-style26"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        </div>
 
-                                    <%--<tr>
-     <td  class="cssTableFieldInput" style= padding:15px >  
-          &nbsp;</td>
-      <td  class="cssTableFieldInput"  >  
-               &nbsp;</td>
-          <td class="auto-style26"></td>
-           <td></td>
-          <td></td>
-          <td></td>
-      </tr>--%>
+                                        <div class="form-group col-md-1">
+                                        </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblBankName" runat="server" Text="Bank Name"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtBankName" runat="server" class="w3-input w3-border"></asp:TextBox>
-                                        </td>
-                                        <td></td>
-                                        <td>
-                                            <asp:Label ID="lblBankCode" runat="server" Text="Bank Code " Visible="False"></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:DropDownList ID="ddlBankCode" runat="server" AutoPostBack="true" class="w3-input w3-border" ValidateRequestMode="Enabled" OnSelectedIndexChanged="ddlBankCode_SelectedIndexChanged" Visible="False">
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label22" runat="server" Text="Bank Name" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtBankName" runat="server" class="form-control input-text-cubic-12"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5" style="visibility: hidden">
+                                            <asp:Label ID="Label24" runat="server" Text="Bank Code" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlBankCode" runat="server" AutoPostBack="true" class="form-control drop-down-cubic-14" ValidateRequestMode="Enabled" OnSelectedIndexChanged="ddlBankCode_SelectedIndexChanged" Visible="False">
                                             </asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                        </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblAccountNo" runat="server" Text="Account No. "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAccountNo" runat="server" class="w3-input w3-border" placeholder="Enter Account No."></asp:TextBox>
-                                        </td>
-                                        <td class="auto-style26">
-                                            <%--<asp:RequiredFieldValidator ID="vAccountNo" runat="server" ControlToValidate="txtAccountNo"  ErrorMessage="Please enter a Account No."  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblEmpStatus" runat="server" Text="Employment Type"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlEmpType" runat="server" AutoPostBack="false" class="w3-input w3-border" ValidateRequestMode="Enabled">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label23" runat="server" Text="Enter Account No" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAccountNo" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Account No."></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label25" runat="server" Text="Employment Type" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlEmpType" runat="server" AutoPostBack="false" class="form-control drop-down-cubic-14" ValidateRequestMode="Enabled">
                                                 <asp:ListItem>Full Time</asp:ListItem>
                                                 <asp:ListItem>Part Time</asp:ListItem>
                                                 <asp:ListItem>Contract</asp:ListItem>
                                             </asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <%--   <asp:Label ID="lblResident" runat="server" Text="Is Resident?"  ></asp:Label>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <%-- <asp:DropDownList ID="ddlResident" runat="server" AutoPostBack="false"   class="w3-input w3-border" ValidateRequestMode="Enabled"  >
-                    <asp:ListItem>Y</asp:ListItem>
-                   <asp:ListItem>N</asp:ListItem>
-               </asp:DropDownList>--%>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                        </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblSalaryStatus" runat="server" Text="Salary Type"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlSalaryType" runat="server" AutoPostBack="false" class="w3-input w3-border" ValidateRequestMode="Enabled">
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label26" runat="server" Text="Salary Type" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlSalaryType" runat="server" AutoPostBack="false" class="form-control drop-down-cubic-14" ValidateRequestMode="Enabled">
                                                 <asp:ListItem>Monthly</asp:ListItem>
                                                 <asp:ListItem>Daily</asp:ListItem>
                                                 <asp:ListItem>Hourly</asp:ListItem>
                                                 <asp:ListItem>Bi Weekly</asp:ListItem>
                                             </asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblShiftPreset" runat="server" Visible="false" Text="Shift Preset"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlShiftPreset" runat="server" Visible="false" AutoPostBack="false" class="w3-input w3-border" ValidateRequestMode="Enabled">
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5" style="visibility: hidden">
+                                            <asp:Label ID="Label27" runat="server" Text="Shift Preset" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlShiftPreset" runat="server" Visible="false" AutoPostBack="false" class="form-control drop-down-cubic-14" ValidateRequestMode="Enabled">
                                                 <asp:ListItem>O1</asp:ListItem>
                                                 <asp:ListItem>O2</asp:ListItem>
                                                 <asp:ListItem>O3</asp:ListItem>
                                                 <asp:ListItem>S</asp:ListItem>
                                             </asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblSalaryWedges" runat="server" Text="Salary Wedges"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtSalaryWedges" runat="server" class="w3-input w3-border" placeholder="Enter Salary Wedges" value="0" onkeypress="return numericOnly(this);"></asp:TextBox>
-                                        </td>
-                                        <td></td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblSalaryCurrency" runat="server" Text="Currency *"> </asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlSalaryCurrency" runat="server" class="w3-input w3-border"></asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label28" runat="server" Text="Salary Wedges" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtSalaryWedges" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Salary Wedges" value="0" onkeypress="return numericOnly(this);"></asp:TextBox>
+                                        </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblAllowanceWedges" runat="server" Text="Meal Allowance"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtAllowanceWedges" runat="server" class="w3-input w3-border" placeholder="Enter Allowance Wedges" value="0" onkeypress="return numericOnly(this);"></asp:TextBox>
-                                        </td>
-                                        <td></td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblAllowanceCurrency" runat="server" Text="Currency *"> </asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlAllowanceCurrency" runat="server" class="w3-input w3-border"></asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                        <div class="form-group col-md-1">
+                                        </div>
 
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label29" runat="server" Text="Currency *" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlSalaryCurrency" runat="server" class="form-control drop-down-cubic-14"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblWorkingHour" runat="server" Text="Working Hour "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtWorkingHour" runat="server" class="w3-input w3-border" placeholder="Enter Working Hour" value="9"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:RegularExpressionValidator ID="vWorkingHour" runat="server" ControlToValidate="txtWorkingHour" ErrorMessage="Please enter valid integer in working hour" ForeColor="Red" Text="*" ValidationExpression="((\d+)((\.\d{1,2})?))$" />
-                                            <%--<asp:RequiredFieldValidator ID="vAllowCurrency" runat="server" ControlToValidate="txtAllowCurrency"  ErrorMessage="Please enter a Allowance Currency"  ForeColor="Red" BorderStyle="None"  >*</asp:RequiredFieldValidator>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblWorkingDay" runat="server" Text="Working Day"></asp:Label></td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="txtWorkingDay" runat="server" class="w3-input w3-border" placeholder="Enter Working Day" value="26"></asp:TextBox>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label30" runat="server" Text="Meal Allowance" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtAllowanceWedges" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Allowance Wedges" value="0" onkeypress="return numericOnly(this);"></asp:TextBox>
+                                        </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblDate1stPayReview" runat="server" Text="Date of first pay"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="DTDatePayReview" ClientIDMode="Static" runat="server" TextMode="Date" class="form-control"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:RequiredFieldValidator ID="vDate1stPayReview" runat="server" ControlToValidate="DTDatePayReview" ErrorMessage="Please enter a Date of first pay" ForeColor="Red" BorderStyle="None" Text="*" />
-                                        </td>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <%--  <asp:Label ID="lblAttTracking" runat="server" Text="Attendance Tracking *" > </asp:Label>--%>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <%-- <asp:RadioButtonList ID="rbAttTracking" runat="server"  RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                            <asp:ListItem Selected="True">Yes</asp:ListItem>
-                              <asp:ListItem>No</asp:ListItem>
-                          </asp:RadioButtonList>--%>
-                                        </td>
-                                        <td></td>
-                                    </tr>
+                                        <div class="form-group col-md-1">
+                                        </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblDateJoin" runat="server" Text="Date of Join "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:TextBox ID="dtDateJoin" ClientIDMode="Static" runat="server" TextMode="Date" class="form-control"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:RequiredFieldValidator ID="vDateJoin" runat="server" ControlToValidate="dtDateJoin" ErrorMessage="Please enter a Date Join" ForeColor="Red" Text="*" />
-                                        </td>
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label31" runat="server" Text="Currency *" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlAllowanceCurrency" runat="server" class="form-control drop-down-cubic-14"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblEClaimOT" runat="server" Text="Entitle Claim OT *">
-                                            </asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:RadioButtonList ID="rbEClaimOT" runat="server" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label32" runat="server" Text="Working Hour" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtWorkingHour" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Working Hour" value="9"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label33" runat="server" Text="Working Day" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="txtWorkingDay" runat="server" class="form-control input-text-cubic-12" placeholder="Enter Working Day" value="26"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label34" runat="server" Text="Date of first pay" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="DTDatePayReview" ClientIDMode="Static" runat="server" TextMode="Date" class="form-control input-text-cubic-12"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label35" runat="server" Text="Date of Join" class="input-label-cubic-14"></asp:Label>
+                                            <asp:TextBox ID="dtDateJoin" ClientIDMode="Static" runat="server" TextMode="Date" class="form-control input-text-cubic-12"></asp:TextBox>
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label36" runat="server" Text="Entitle Claim OT *" class="input-label-cubic-14"></asp:Label>
+                                            <asp:RadioButtonList ID="rbEClaimOT" runat="server" RepeatColumns="2" class="form-control input-radio-cubic-20" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                 <asp:ListItem Selected="True">Yes</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
                                             </asp:RadioButtonList>
-                                        </td>
-                                        <td>&nbsp;</td>
-                                    </tr>
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput">
-                                            <asp:Label ID="lblDateResign" runat="server" Text="Date of Resign "></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:RadioButtonList ID="rbIsResign" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rbIsResign_SelectedIndexChanged" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label38" runat="server" Text="Date of Resign" class="input-label-cubic-14"></asp:Label>
+                                            <asp:RadioButtonList ID="rbIsResign" runat="server" AutoPostBack="true" class="form-control input-radio-cubic-20" OnSelectedIndexChanged="rbIsResign_SelectedIndexChanged" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                 <asp:ListItem>Yes</asp:ListItem>
                                                 <asp:ListItem Selected="True">No</asp:ListItem>
                                             </asp:RadioButtonList>
-                                        </td>
-                                        <td>&nbsp;</td>
-                                        <td></td>
-                                        <td class="cssTableFieldInput">
+                                        </div>
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                          <div class="form-group col-md-5">
+                                            <asp:Label ID="Label37" runat="server" Text="" class="input-label-cubic-14"></asp:Label>
                                             <asp:TextBox ID="dtDateResign" ClientIDMode="Static" runat="server" TextMode="Date" class="form-control"></asp:TextBox>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:RequiredFieldValidator ID="vDateResign" runat="server" ControlToValidate="dtDateResign" ErrorMessage="Please enter a Date Resign" ForeColor="Red" Text="*" Visible="False" />
-                                        </td>
+                                        </div>
 
-                                    </tr>
+                                    </div>
 
-                                    <tr>
-                                        <td class="cssTableFieldInput" style="padding: 15px">
-                                            <asp:Label ID="lblResignType" runat="server" Text="Resign Type"></asp:Label>
-                                        </td>
-                                        <td class="cssTableFieldInput">
-                                            <asp:DropDownList ID="ddlResignType" runat="server" AutoPostBack="false" class="w3-input w3-border" ValidateRequestMode="Enabled">
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5">
+                                            <asp:Label ID="Label39" runat="server" Text="Resign Type" class="input-label-cubic-14"></asp:Label>
+                                            <asp:DropDownList ID="ddlResignType" runat="server" AutoPostBack="false" class="form-control drop-down-cubic-14" ValidateRequestMode="Enabled">
                                                 <asp:ListItem>-</asp:ListItem>
                                                 <asp:ListItem>Resign</asp:ListItem>
                                                 <asp:ListItem>Terminate</asp:ListItem>
                                                 <asp:ListItem>Quit</asp:ListItem>
                                             </asp:DropDownList>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        </div>
+                                        <div class="form-group col-md-1">
+                                        </div>
+                                    </div>
 
-                                    <tr>
-                                        <th>
+                                    <div class="row row-margin-btm-cubic">
+                                        <div class="form-group col-md-5 d-flex justify-content-end">
                                             <asp:Button ID="btnBackPage2" runat="server" BorderStyle="Solid" CssClass="auto-style1" Height="35" OnClick="btnBackPage2_Click" Style="float: left; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="&lt;&lt; Back Page" Width="200" />
-                                        </th>
-                                        <th></th>
-                                        <th></th>
-                                        <th>
                                             <asp:Button ID="btnClearAll3" runat="server" Style="float: right; background-color: #FFFFFF; color: #FAAB1A; border-radius: 8px; font-size: small" Text="Clear All" BorderStyle="Solid" Width="180" Height="35" CssClass="auto-style1" OnClick="btnClearAll3_Click" BorderColor="#FAAB1A" />
-                                        </th>
-                                        <th>
-                                            <asp:Button ID="btnSummary" runat="server" BorderStyle="Solid" class="btnSummary" CssClass="auto-style1" Height="35" OnClick="btnSummary_Click" Style="float: right; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="Summary &gt;&gt;" Width="200" />
-                                        </th>
-                                        <th>&nbsp;</th>
-                                    </tr>
+                                            <asp:Button ID="btnSummary" runat="server" BorderStyle="Solid" class="btn-next-cubic btnSummary" CssClass="auto-style1" Height="35" OnClick="btnSummary_Click" Style="float: right; background-color: #FAAB1A; color: #FFFFFF; border-radius: 8px; font-size: small" Text="Summary &gt;&gt;" Width="200" />
+                                        </div>
+                                    </div>
+
+                                </div>
 
 
-                                </table>
+
+
+
+
                             </asp:View>
 
                             <asp:View ID="View4" runat="server">
@@ -1861,12 +1663,10 @@
 
                     </div>
 
-
                 </div>
             </div>
         </div>
     </div>
-
 
     <br />
 </asp:Content>

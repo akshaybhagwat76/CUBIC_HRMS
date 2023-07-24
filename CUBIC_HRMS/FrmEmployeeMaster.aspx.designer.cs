@@ -744,13 +744,22 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.View View2;
 
         /// <summary>
-        /// lblAddress1 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress1;
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// txtAddress1 control.
@@ -762,13 +771,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtAddress1;
 
         /// <summary>
-        /// lblAddress2 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress2;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// txtAddress2 control.
@@ -780,13 +789,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtAddress2;
 
         /// <summary>
-        /// lblAddress3 control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress3;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
         /// txtAddress3 control.
@@ -798,13 +807,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtAddress3;
 
         /// <summary>
-        /// lblAddress4 control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress4;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
         /// txtAddress4 control.
@@ -816,13 +825,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtAddress4;
 
         /// <summary>
-        /// lblPostCode control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPostCode;
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
         /// txtPostCode control.
@@ -834,13 +843,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtPostCode;
 
         /// <summary>
-        /// lblCity control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCity;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
         /// txtCity control.
@@ -852,13 +861,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtCity;
 
         /// <summary>
-        /// lblState control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblState;
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
         /// txtState control.
@@ -870,13 +879,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtState;
 
         /// <summary>
-        /// lblCountry control.
+        /// Label9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountry;
+        protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
         /// txtCountry control.
@@ -888,13 +897,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtCountry;
 
         /// <summary>
-        /// lblAddContact1 control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddContact1;
+        protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
         /// txtAddContactNo1 control.
@@ -915,13 +924,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.CheckBox chkSameAsAbove;
 
         /// <summary>
-        /// lblMAddress1 control.
+        /// Label12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMAddress1;
+        protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
         /// txtMAddress1 control.
@@ -933,13 +942,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMAddress1;
 
         /// <summary>
-        /// lblMAddress2 control.
+        /// Label13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMAddress2;
+        protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
         /// txtMAddress2 control.
@@ -951,13 +960,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMAddress2;
 
         /// <summary>
-        /// lblMAddress3 control.
+        /// Label14 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMAddress3;
+        protected global::System.Web.UI.WebControls.Label Label14;
 
         /// <summary>
         /// txtMAddress3 control.
@@ -969,13 +978,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMAddress3;
 
         /// <summary>
-        /// lblMAddress4 control.
+        /// Label15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMAddress4;
+        protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
         /// txtMAddress4 control.
@@ -987,13 +996,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMAddress4;
 
         /// <summary>
-        /// lblMPostCode control.
+        /// Label16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMPostCode;
+        protected global::System.Web.UI.WebControls.Label Label16;
 
         /// <summary>
         /// txtMPostCode control.
@@ -1005,13 +1014,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMPostCode;
 
         /// <summary>
-        /// lblMCity control.
+        /// Label17 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMCity;
+        protected global::System.Web.UI.WebControls.Label Label17;
 
         /// <summary>
         /// txtMCity control.
@@ -1023,13 +1032,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMCity;
 
         /// <summary>
-        /// lblMState control.
+        /// Label18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMState;
+        protected global::System.Web.UI.WebControls.Label Label18;
 
         /// <summary>
         /// txtMState control.
@@ -1041,13 +1050,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMState;
 
         /// <summary>
-        /// lblMCountry control.
+        /// Label19 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMCountry;
+        protected global::System.Web.UI.WebControls.Label Label19;
 
         /// <summary>
         /// txtMCountry control.
@@ -1059,13 +1068,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtMCountry;
 
         /// <summary>
-        /// lblMContactNo1 control.
+        /// Label20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMContactNo1;
+        protected global::System.Web.UI.WebControls.Label Label20;
 
         /// <summary>
         /// txtMContactNo1 control.
@@ -1113,13 +1122,22 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.View View3;
 
         /// <summary>
-        /// lblPaymentType control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaymentType;
+        protected global::System.Web.UI.WebControls.Label Label11;
+
+        /// <summary>
+        /// Label21 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label21;
 
         /// <summary>
         /// ddlPaymentType control.
@@ -1131,13 +1149,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlPaymentType;
 
         /// <summary>
-        /// lblBankName control.
+        /// Label22 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBankName;
+        protected global::System.Web.UI.WebControls.Label Label22;
 
         /// <summary>
         /// txtBankName control.
@@ -1149,13 +1167,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtBankName;
 
         /// <summary>
-        /// lblBankCode control.
+        /// Label24 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBankCode;
+        protected global::System.Web.UI.WebControls.Label Label24;
 
         /// <summary>
         /// ddlBankCode control.
@@ -1167,13 +1185,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlBankCode;
 
         /// <summary>
-        /// lblAccountNo control.
+        /// Label23 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAccountNo;
+        protected global::System.Web.UI.WebControls.Label Label23;
 
         /// <summary>
         /// txtAccountNo control.
@@ -1185,13 +1203,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtAccountNo;
 
         /// <summary>
-        /// lblEmpStatus control.
+        /// Label25 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmpStatus;
+        protected global::System.Web.UI.WebControls.Label Label25;
 
         /// <summary>
         /// ddlEmpType control.
@@ -1203,13 +1221,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlEmpType;
 
         /// <summary>
-        /// lblSalaryStatus control.
+        /// Label26 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSalaryStatus;
+        protected global::System.Web.UI.WebControls.Label Label26;
 
         /// <summary>
         /// ddlSalaryType control.
@@ -1221,13 +1239,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlSalaryType;
 
         /// <summary>
-        /// lblShiftPreset control.
+        /// Label27 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShiftPreset;
+        protected global::System.Web.UI.WebControls.Label Label27;
 
         /// <summary>
         /// ddlShiftPreset control.
@@ -1239,13 +1257,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlShiftPreset;
 
         /// <summary>
-        /// lblSalaryWedges control.
+        /// Label28 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSalaryWedges;
+        protected global::System.Web.UI.WebControls.Label Label28;
 
         /// <summary>
         /// txtSalaryWedges control.
@@ -1257,13 +1275,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtSalaryWedges;
 
         /// <summary>
-        /// lblSalaryCurrency control.
+        /// Label29 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSalaryCurrency;
+        protected global::System.Web.UI.WebControls.Label Label29;
 
         /// <summary>
         /// ddlSalaryCurrency control.
@@ -1275,13 +1293,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlSalaryCurrency;
 
         /// <summary>
-        /// lblAllowanceWedges control.
+        /// Label30 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAllowanceWedges;
+        protected global::System.Web.UI.WebControls.Label Label30;
 
         /// <summary>
         /// txtAllowanceWedges control.
@@ -1293,13 +1311,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtAllowanceWedges;
 
         /// <summary>
-        /// lblAllowanceCurrency control.
+        /// Label31 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAllowanceCurrency;
+        protected global::System.Web.UI.WebControls.Label Label31;
 
         /// <summary>
         /// ddlAllowanceCurrency control.
@@ -1311,13 +1329,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.DropDownList ddlAllowanceCurrency;
 
         /// <summary>
-        /// lblWorkingHour control.
+        /// Label32 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWorkingHour;
+        protected global::System.Web.UI.WebControls.Label Label32;
 
         /// <summary>
         /// txtWorkingHour control.
@@ -1329,22 +1347,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtWorkingHour;
 
         /// <summary>
-        /// vWorkingHour control.
+        /// Label33 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator vWorkingHour;
-
-        /// <summary>
-        /// lblWorkingDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWorkingDay;
+        protected global::System.Web.UI.WebControls.Label Label33;
 
         /// <summary>
         /// txtWorkingDay control.
@@ -1356,13 +1365,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox txtWorkingDay;
 
         /// <summary>
-        /// lblDate1stPayReview control.
+        /// Label34 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate1stPayReview;
+        protected global::System.Web.UI.WebControls.Label Label34;
 
         /// <summary>
         /// DTDatePayReview control.
@@ -1374,22 +1383,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox DTDatePayReview;
 
         /// <summary>
-        /// vDate1stPayReview control.
+        /// Label35 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator vDate1stPayReview;
-
-        /// <summary>
-        /// lblDateJoin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateJoin;
+        protected global::System.Web.UI.WebControls.Label Label35;
 
         /// <summary>
         /// dtDateJoin control.
@@ -1401,22 +1401,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox dtDateJoin;
 
         /// <summary>
-        /// vDateJoin control.
+        /// Label36 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator vDateJoin;
-
-        /// <summary>
-        /// lblEClaimOT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEClaimOT;
+        protected global::System.Web.UI.WebControls.Label Label36;
 
         /// <summary>
         /// rbEClaimOT control.
@@ -1428,13 +1419,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.RadioButtonList rbEClaimOT;
 
         /// <summary>
-        /// lblDateResign control.
+        /// Label38 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateResign;
+        protected global::System.Web.UI.WebControls.Label Label38;
 
         /// <summary>
         /// rbIsResign control.
@@ -1446,6 +1437,15 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.RadioButtonList rbIsResign;
 
         /// <summary>
+        /// Label37 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label37;
+
+        /// <summary>
         /// dtDateResign control.
         /// </summary>
         /// <remarks>
@@ -1455,22 +1455,13 @@ namespace CUBIC_HRMS
         protected global::System.Web.UI.WebControls.TextBox dtDateResign;
 
         /// <summary>
-        /// vDateResign control.
+        /// Label39 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator vDateResign;
-
-        /// <summary>
-        /// lblResignType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResignType;
+        protected global::System.Web.UI.WebControls.Label Label39;
 
         /// <summary>
         /// ddlResignType control.
